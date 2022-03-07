@@ -21,6 +21,7 @@ var time = [
   "18",
 ];
 
+// set color class by time
 var checkTime = function () {
   var currentTime = moment().format("HH");
 
@@ -37,9 +38,31 @@ var checkTime = function () {
   }
 };
 
+// refresh colors every minute
 var timeAudit = function () {
   setInterval(checkTime, 60000);
 };
 
+//save to storage onClick
+$(".saveBtn").click(function () {
+  storageKey = $(this).parent().attr("id");
+
+  indexKey = storageKey.split("-");
+
+  input = "#input" + indexKey[1];
+
+  localStorage.setItem(storageKey, $(input).val());
+});
+
+// read from storage
+var getStorage = function () {
+  for (i = 0; i < time.length; i++) {
+    var storageInput = "#input" + time[i];
+    var storageKey = "hour-" + time[i];
+    $(storageInput).val(localStorage.getItem(storageKey));
+  }
+};
+
 checkTime();
 timeAudit();
+getStorage();

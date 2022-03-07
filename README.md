@@ -25,3 +25,23 @@ WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+## Built With
+* HTML
+* CSS
+* Java Script
+* Jquery
+* Bootstrap
+
+## Website
+https://bobpruz.github.io/dailyplanner/index.html
+
+## Maintainers
+
+The repository is maintained by Robert Prusinowski
+
+<a href="mailto:bobpruz@gmail.com">Email: Robert Prusinowski</a>
+
+### Screenshot 
+
+![Screenshot](screenshot.jpg)
