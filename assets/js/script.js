@@ -31,8 +31,11 @@ var checkTime = function () {
     if (time[i] > currentTime) {
       $(inputClass).addClass("future");
     } else if (time[i] === currentTime) {
+      $(inputClass).removeClass("future");
       $(inputClass).addClass("present");
     } else {
+      $(inputClass).removeClass("future");
+      $(inputClass).removeClass("present");
       $(inputClass).addClass("past");
     }
   }
